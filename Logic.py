@@ -153,25 +153,7 @@ class GameLogic:
         # Calculate row and col using floating-point division for better accuracy
         col = (x - 120) // third_width
         row = (y - 120) // third_height
-        """ ERROR_CASE
-        Incorrect offset:
-        The offsets used (100 for both x and y) are not ideal.
-        They should be the same as the border width used when
-        drawing the grid (120 in this case).
-        # Why do keep making my life harder?? this was a simple fix // DO not tuch
         
-        # screen_width = self.screen.get_width()
-        # screen_height = self.screen.get_height()
-        # third_width = (screen_width - 200) // 3
-        # third_height = (screen_height - 200) // 3
-        
-        # Check if the click is within the grid bounds
-        # if x < 120 or x > 120 + 3 * third_width or y < 120 or y > 120 + 3 * third_height:
-        #     return False
-        
-        # col = (x - 100) // third_width
-        # row = (y - 100) // third_height
-        """#ERROR_CASE -> ENDS HERE! 
         
         """row and col are within valid range"""
         if col < 0 or col >= 3 or row < 0 or row >= 3:
